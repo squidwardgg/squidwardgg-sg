@@ -1,0 +1,23 @@
+name: SG
+main: me.squidward.sg.Main
+version: 1.0
+author: squidward
+description: Squidward's attempted remake at KohiSG
+commands:
+  sstart:
+    description: Starts the Survival Games.
+    usage: /ssstart
+    permission: squid.sgstart
+    permission-message: You do not have permission to use squid.start.
+  sstop:
+    description: Stops the Survival Games.
+    usage: /ssstop
+    permission: squid.sgstop
+    permission-message: You do not have permission to use squid.sgstop.
+permissions:
+squid.sgstart:
+   description: Starts the Survival Games.
+   default: op
+squid.sgstop:
+   description: Stop the Survival Games.
+   default: op
