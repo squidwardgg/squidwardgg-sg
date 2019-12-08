@@ -34,20 +34,20 @@ public class Main extends JavaPlugin {
 
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event) {
-		
+
 		Player player = event.getPlayer();
-		if (Bukkit.getServer().getOnlinePlayers().size() == 16) {
+		if (Bukkit.getServer().getOnlinePlayers().size() => 16) {
 			player.kickPlayer(event.getPlayer().getName());
 		}
-		
+
 	}
-	
+
 	@EventHandler
 	public void onPlayerDeath(PlayerDeathEvent e){
 		Player p = e.getEntity().getPlayer();
 		Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "kick" + p.getName());
 	}
-	
+
 	// Commands
 
 	@Override
@@ -65,8 +65,8 @@ public class Main extends JavaPlugin {
 				Bukkit.getScheduler ().runTaskLater (this, () -> Bukkit.getServer().broadcastMessage(ChatColor.RED + " Grace Period is over, fight!"), 1800); //20 ticks equal 1 second
 				Bukkit.getScheduler().runTaskLater(this, () -> p.teleport(location), 1200);
 			}
-			
-			
+
+
 			return true;
 		}
 		if (cmd.getName().equalsIgnoreCase("sstop")) {
